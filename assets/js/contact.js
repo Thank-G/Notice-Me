@@ -35,34 +35,35 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
+                    required: "Please, your name is required",
                     minlength: "your name must consist of at least 2 characters"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
+                    required: "Subject field is required",
                     minlength: "your subject must consist of at least 4 characters"
                 },
                 number: {
-                    required: "come on, you have a number, don't you?",
+                    required: "We need your phone number so that we can reach you.",
                     minlength: "your Number must consist of at least 5 characters"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "your email address is required"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
+                    required: "We need your message soo that we can serve you better",
                     minlength: "thats all? really?"
                 }
             },
+            
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    // url:"contact_process.php",
                     success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
+                        $('#contactForm :input').attr('enabled', 'enabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {
-                            $(this).find(':input').attr('disabled', 'disabled');
+                            $(this).find(':input').attr('enabled', 'enabled');
                             $(this).find('label').css('cursor','default');
                             $('#success').fadeIn()
                             $('.modal').modal('hide');

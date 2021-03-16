@@ -1,6 +1,6 @@
 <?php
 
-    $to = "rockybd1995@gmail.com";
+    $to = "bereonwuthankgod@gmail.com";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $subject = $_REQUEST['subject'];
@@ -13,10 +13,10 @@
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-    $subject = "You have a message from your Bitmap Photography.";
+    $subject = "You have new message from your WEBSITE.";
 
     $logo = 'img/logo.png';
-    $link = '#';
+    $link = 'https://adewaleandadewale.netlify.com';
 
 	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
 	$body .= "<table style='width: 100%;'>";
@@ -32,6 +32,16 @@
 	$body .= "</tbody></table>";
 	$body .= "</body></html>";
 
+
     $send = mail($to, $subject, $body, $headers);
+
+	
+                                    
+	.then(function (message) {
+		alert(
+		"We acknowledge your message, And we'll get back to you shortly!",
+		)
+		location.reload()
+	})
 
 ?>

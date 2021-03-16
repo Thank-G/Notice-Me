@@ -132,8 +132,8 @@
     }
 
 
-/* 5. Gallery Active */
-    var client_list = $('.gallery-active');
+/* 5. project Active */
+    var client_list = $('.project-active');
     if(client_list.length){
       client_list.owlCarousel({
         slidesToShow: 3,
@@ -229,11 +229,11 @@
 
 
 // 12 Pop Up Img
-    var popUp = $('.single_gallery_part, .img-pop-up');
+    var popUp = $('.single_project_part, .img-pop-up');
       if(popUp.length){
         popUp.magnificPopup({
           type: 'image',
-          gallery:{
+          project:{
             enabled:true
           }
         });

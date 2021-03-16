@@ -312,7 +312,7 @@ $.fn.ajaxSubmit = function(options) {
             for (i=0; i < elements.length; i++) {
                 el = $(elements[i]);
                 if ( hasProp )
-                    el.prop('disabled', false);
+                    el.prop('enabled', false);
                 else
                     el.removeAttr('disabled');
             }
